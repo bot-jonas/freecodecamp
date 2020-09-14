@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Product Landing Page</title>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+	<style type="text/css">
+		body {
+			font-size: 16pt;
+			margin: 0;
+			font-family: Open Sans;
+			background-color: #FFF;
+		}
+
+		.container {
+			max-width: 800px;
+			margin: 0 auto;
+		}
+
+		ul {
+			list-style: none;
+		}
+
+		a {
+			text-decoration: none;
+			color: black;
+		}
+
+		a:hover {
+			opacity: 0.8;
+		}
+
+		#header {
+			position: fixed;
+			width: 100%;
+			top: 0;
+			background-color: #FFF;
+		}
+
+		#header .container {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		#header-img {
+			display: flex;
+			align-self: center;
+			width: 100px;
+		}
+
+		nav ul {
+			width: 50vw;
+			display: flex;
+			flex-direction: row;
+			justify-content: space-around;
+		}
+
+		#content {
+			margin-top: 100px;
+		}
+
+		.emote {
+			height: 30px;
+		}
+
+		#samples {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		.product {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			width: calc(100%/3 - 10px);
+			border: 1px solid #000;
+		}
+
+		.product > img {
+			width: 60%;
+			height: 200px;
+			object-fit: contain;
+			margin-top: 20px;
+		}
+
+		.product > h3 {
+			margin-bottom: 10px;
+		}
+
+		.btn {
+			border: 0;
+			padding: 5px 10px;
+			margin: 15px 0;
+			background-color: #db3a37;
+			font-weight: 800;
+			color: white;
+		}
+
+		.btn:hover {
+			cursor: pointer;
+			opacity: 0.8;
+		}
+
+		#customize > form {
+			display: flex;
+		  	flex-direction: column;
+		  	align-items: flex-start;
+		  	width: 60%;
+		  	margin: 20px auto;
+		}
+
+		input[type="email"] {
+			min-width: calc(100% - 14px);
+			margin-bottom: 10px;
+			padding: 5px;
+		}
+
+		input[type="file"] {
+			margin-bottom: 10px;
+		}
+
+		#video {
+			width: 60%;
+			display: block;
+			margin: 0 auto;
+		}
+
+		footer {
+			margin-top: 30px;
+			background-color: #db3a37;
+			padding: 20px;
+		}
+
+		footer > ul {
+			display: flex;
+			justify-content: flex-end;
+			margin: 0;
+		}
+
+		footer > ul > li {
+			padding: 0 10px;
+		}
+
+		footer > ul > li > a {
+			color: white;
+		}
+
+		footer > span {
+			display: flex;
+			justify-content: flex-end;
+			font-size: 0.9em;
+			color: #000;
+			margin-top: 10px;
+		}
+
+		@media (max-width: 650px) {
+			#header {
+				position: initial;
+			}
+			
+			#header .container {
+				display: flex;
+    			flex-direction: column;
+    			align-items: center;
+			}
+
+			#header-img {
+				display: flex;
+			    align-self: center;
+			    width: 100px;
+			    margin-top: 10px;
+			    margin-left: 35px;
+			}
+
+			nav ul {
+			    width: 50vw;
+			    display: flex;
+			    flex-direction: column;
+			    align-items: center;
+			}
+
+			#content {
+				margin-top: 10px;
+			}
+
+			section {
+				text-align: center;
+				padding: 10px;
+			}
+
+			#samples {
+				display: flex;
+    			flex-direction: column;
+			}
+
+			.product {
+			    display: flex;
+			    flex-direction: column;
+			    align-items: center;
+			    text-align: center;
+			    width: calc(100% - 10px);
+			    border: 1px solid #000;
+			    margin-bottom: 10px;
+			}
+		}
+	</style>
+</head>
+<body>
+<header id="header">
+	<div class="container">
+		<img
+			id="header-img"
+			src="https://i.imgur.com/OiAJYoT.png"
+			alt="LEWD logo"
+		>
+
+		<nav id="nav-bar">
+			<ul>
+				<li><a class="nav-link" href="#features">Features</a></li>
+				<li><a class="nav-link" href="#samples">Samples</a></li>
+				<li><a class="nav-link" href="#customize">Customize</a></li>
+				<li><a class="nav-link" href="#testimonials">Testimonials</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+<main id="content">
+	<div class="container">
+		<section id="features">
+			<div class="grid">
+				<div class="desc">
+					<h2>Premium Materials</h2>
+					<p>
+						Our hoodies doesn't stain. <img class="emote" src="https://i.imgur.com/LsGSvH1.png" alt="Kappa">
+					</p>
+				</div>
+			</div>
+			<div class="grid">
+				<div class="desc">
+					<h2>Fast Shipping</h2>
+					<p>
+						We make sure you recieve your hoodie as soon as possible.
+					</p>
+				</div>
+			</div>
+		</section>
+		<section>
+			<h2>Samples</h2>
+			<section id="samples">
+				<div class="product">
+					<img src="https://images-na.ssl-images-amazon.com/images/I/71-jPDolyQL._AC_UL1010_.jpg">
+					<h3>Ahegao Hoodie 1</h3>
+					<span>$20.00</span>
+					<button class="btn">Add to cart</button>
+				</div>
+				<div class="product">
+					<img src="https://i.pinimg.com/originals/31/91/a2/3191a28e14b6a2ad1c2ed30300f03815.jpg">
+					<h3>Ahegao Hoodie 2</h3>
+					<span>$25.00</span>
+					<button class="btn">Add to cart</button>
+				</div>
+				<div class="product">
+					<img src="https://cdn.shopify.com/s/files/1/1171/8456/products/ahegao_back_grande.png?v=1571609423">
+					<h3>Ahegao Hoodie 3</h3>
+					<span>$20.00</span>
+					<button class="btn">Add to cart</button>
+				</div>
+			</section>
+		</section>
+		<section id="customize">
+			<h2>Customize</h2>
+			<h3>Send us an image and your email so we can make a quote.</h3>
+			<form id="form" action="https://www.freecodecamp.com/email-submit">
+				<input
+					name="email"
+					id="email"
+					type="email"
+					placeholder="Enter your email address"
+					required
+				>
+				<input type="file" name="image">
+				<input id="submit" type="submit" value="Send" class="btn">
+			</form>
+		</section>
+		<section id="testimonials">
+			<h2>Testimonials</h2>
+			<iframe
+	        id="video"
+	        height="300"
+	        src="https://www.youtube-nocookie.com/embed/Bui9oTyPfjM?rel=0&amp;controls=0&amp;showinfo=0"
+	        frameborder="0"
+	        allowfullscreen
+	      ></iframe>
+	    </section>
+
+		<footer>
+			<ul>
+				<li><a href="#">Privacy</a></li>
+				<li><a href="#">Terms</a></li>
+			</ul>
+			<span>&copy; 2020 - LEWD</span>
+		</footer>
+	</div>
+</main>
+</body>
+<script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>

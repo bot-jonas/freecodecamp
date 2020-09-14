@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Survey Form</title>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans" rel="stylesheet">
+	<style type="text/css">
+		body {
+			font-size: 16pt;
+			margin: 0;
+			font-family: Open Sans;
+			background-color: #DDD;
+		}
+
+		#main {
+			max-width: 800px;
+			padding: 40px;
+			margin: 40px auto;
+			background-color: white;
+		}
+
+		#title {
+			text-align: center;
+		}
+
+		#description {
+			text-align: center;
+			color: #555;
+		}
+
+		#survey-form {
+			width: 80%;
+			margin: 0 auto;
+		}
+
+		.form-field {
+			margin-bottom: 10px;
+		}
+
+		.form-field label {
+			font-size: 0.9em;
+			display: block;
+		}
+
+		.form-field p {
+			font-weight: bold;
+		}
+
+		input[type="text"], input[type="email"], input[type="number"] {
+			width: calc(100% - 14px);
+			padding: 5px;
+		}
+
+		input[type="radio"], input[type="checkbox"] {
+			cursor: pointer;
+		}
+
+		select {
+			padding: 5px;
+		}
+
+		textarea {
+			width: calc(100% - 12px);
+			height: 100px;
+			padding: 5px;
+			resize: none;
+		}
+
+		button[type="submit"] {
+			padding: 5px 10px;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+<main id="main">
+	<h1 id="title">Math history survey</h1>
+	<p id="description">A survey about math history</p>
+	
+	<form id="survey-form">
+		<div class="form-field">
+			<label id="name-label" for="name">Name</label>
+			<input
+				type="text"
+				name="name"
+				id="name"
+				placeholder="Enter your name"
+				required
+			>
+		</div>
+		<div class="form-field">
+			<label id="email-label" for="email">Email</label>
+			<input
+				type="email"
+				name="email"
+				id="email"
+				placeholder="Enter your Email"
+				required
+			>
+		</div>
+		<div class="form-field">
+			<label id="number-label" for="number"
+				>Age</span></label
+			>
+			<input
+				type="number"
+				name="age"
+				id="number"
+				min="10"
+				max="99"
+				class="form-control"
+				placeholder="Age"
+				required
+			>
+		</div>
+		<div class="form-field">
+			<p>Is it true that (a+b<sup>n</sup>)/n = x proves that God exists?</p>
+			<select id="dropdown" name="euler-god" class="form-control" required>
+				<option disabled selected value>Select your answer</option>
+				<option value="trivial">Trivial</option>
+				<option value="absurd">Absurd</option>
+				<option value="idk">IDK</option>
+			</select>
+		</div>
+
+		<div class="form-field">
+			<p>Is it true that Fermat proves his last theorem?</p>
+			<label>
+				<input
+					name="fermat-prove"
+					value="definitely"
+					type="radio"
+					class="input-radio"
+					checked
+				>
+				Definitely
+			</label>
+			<label>
+				<input
+					name="fermat-prove"
+					value="maybe"
+					type="radio"
+					class="input-radio"
+				>
+				Maybe
+			</label>
+
+			<label>
+				<input
+					name="fermat-prove"
+					value="nope"
+					type="radio"
+					class="input-radio"
+				>
+				Nope
+			</label>
+		</div>
+
+		<div class="form-field">
+			<p>
+				Is it true that all non-trivial zeros of zeta function have 1/2 as real part?
+			</p>
+			<label
+				><input
+					name="answer"
+					value="idk"
+					type="checkbox"
+					class="input-checkbox"
+				>
+				I don't know
+			</label>
+			<label
+				><input
+					name="answer"
+					value="no-one-know"
+					type="checkbox"
+					class="input-checkbox"
+				>
+				No one know
+			</label>
+			<label
+				><input
+					name="answer"
+					value="ramanujan-knew"
+					type="checkbox"
+					class="input-checkbox"
+				>
+				Maybe Ramanujan knew
+			</label>
+		</div>
+
+		<div class="form-field">
+			<p>Do you know an interesting fact?</p>
+			<textarea
+				id="fact"
+				class="input-textarea"
+				name="fact"
+				placeholder="Enter your fact here..."
+			></textarea>
+		</div>
+
+		<div class="form-field">
+			<button type="submit" id="submit" class="submit-button">
+				Submit
+			</button>
+		</div>
+	</form>
+</div>
+</body>
+<script type="text/javascript" src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</html>
